@@ -1,0 +1,91 @@
+1:sky-take-out；maven父工程，统一管理依赖版本，聚合其他子模块
+2：sky-common：子模块，放公共类例如：工具类，常量类，异常类
+3：sky-pojo：子模块，放实体类
+4：sky-common：子模块，后端服务，存放配置文件，controller，service。mapper等
+
+package com.sky.test;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.connection.DataType;
+import org.springframework.data.redis.core.*;
+
+import java.util.List;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
+
+//@SpringBootTest
+public class SpringDataRedisTest {
+
+   // @Autowired
+   // private RedisTemplate redisTemplate;
+    @Test
+    public void testRedisTemplate(){
+     /*   System.out.print(redisTemplate);
+        ValueOperations valueOperations = redisTemplate.opsForValue();
+        HashOperations hashOperations = redisTemplate.opsForHash();
+        ListOperations listOperations = redisTemplate.opsForList();
+        SetOperations setOperations = redisTemplate.opsForSet();
+        ZSetOperations zSetOperations = redisTemplate.opsForZSet();*/
+    }}
+   /* //操作string类型
+    @Test
+    public void testString(){
+        redisTemplate.opsForValue().set("city","北京");
+       String city=(String) redisTemplate.opsForValue().get("city");
+       System.out.print(city);
+       redisTemplate.opsForValue().set("code","1245",1, TimeUnit.MINUTES);
+    }
+    //操作哈希
+    @Test
+    public void testHash(){
+        HashOperations hashOperations=redisTemplate.opsForHash();
+      hashOperations.put("100","name","tom");
+        hashOperations.put("100","age","56");
+     String name=(String) hashOperations.get("100","name");
+     System.out.println(name);
+     Set keys=hashOperations.keys("100");
+        System.out.println(keys);
+     hashOperations.delete("100",name);
+    }
+
+    //操作列表
+    @Test
+    public void testList(){
+        ListOperations listOperations = redisTemplate.opsForList();
+        listOperations.leftPushAll("mylist","a","b");
+       List mylist= listOperations.range("mylist",0,-1);
+        System.out.println(mylist);
+        listOperations.rightPop("mylist");
+        Long size=listOperations.size("mylist");
+        System.out.println(size);
+    }
+
+    //操作集合
+    @Test
+    public void testSet(){
+        SetOperations setOperations = redisTemplate.opsForSet();
+        setOperations.add("Set1","a","b","c");
+        setOperations.add("Set2","a","y","x");
+        Set members=setOperations.members("set1");
+        System.out.println(members);
+       Set intersect= setOperations.intersect("set1","set2");
+        System.out.println(intersect);
+        Set union= setOperations.union("set1","set2");
+        System.out.println(union);
+        setOperations.remove("set1","a");
+    }
+
+    //普遍操作
+    @Test
+    public void testCommon(){
+        Set keys=redisTemplate.keys("*");
+        Boolean name=redisTemplate.hasKey("name");
+        for(Object key : keys){
+            DataType type=redisTemplate.type(key);
+            System.out.println(type.name());
+        }
+        redisTemplate.delete("mylist");
+    }*/
+

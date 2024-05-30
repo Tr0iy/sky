@@ -1,0 +1,21 @@
+sky:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    host: localhost
+    port: 3306
+    database: sky_take_out
+    username: root
+    password: 123456
+  alioss:
+    endpoint: oss-cn-beijing.aliyuncs.com
+    access-key-id: LTAI5tGbbnv2NiojDGjH6wZZ
+    access-key-secret: bynpB9sA6hT11CRbhAmRNyq9jbEk0d
+    bucket-name: wxc1-bucket-2024
+  redis:
+    host: localhost
+    port: 6379
+    database: 10
+  wechat:
+    appid: wxf939a4fb2f644262
+    secret: 34ae97ac421c3d980964bcbcdc28ca61
+    notifyUrl: https://5af0bd8d.r8.cpolar.top/notify/paySuccess
